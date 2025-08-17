@@ -1,0 +1,30 @@
+# config/config.yaml
+
+binance:
+  api_key: "d7e6e15ccdb21673202250a6c5652d95032486b017a3ed944b58690f8ac61b84"
+  api_secret: "9340eb4ac01a86ed45dedbec7238ea258bd838ef434dc82523ce95c0251800c5"
+  base_url: "https://testnet.binancefuture.com"
+
+trade:
+  symbols_file: "data/symbols.json"
+  leverage: 20
+  max_position_size: 0.1
+  order_type: "MARKET"
+
+strategy:
+  name: "example_strategy"
+  params:
+    short_ma_period: 7
+    long_ma_period: 25
+    rsi_period: 14
+    rsi_overbought: 70
+    rsi_oversold: 30
+
+risk_management:
+  max_drawdown_percent: 5
+  stop_loss_percent: 1
+  take_profit_percent: 2
+
+logging:
+  level: "INFO"
+  file: "logs/bot.log"

@@ -1,0 +1,2 @@
+npm install -g widdershins                           //yüklü degilse yükle
+widdershins swagger.json -o api-doc.md               //konsolda çalıştır

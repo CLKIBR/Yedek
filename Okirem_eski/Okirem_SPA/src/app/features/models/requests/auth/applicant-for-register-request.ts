@@ -1,0 +1,33 @@
+export interface ApplicantForRegisterRequest {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber?: string;
+  birthDate?: Date;
+  gender?: number;
+  address?: string;
+  nationalId?: string;
+  profileImageUrl?: string;
+  registrationDate?: Date;
+  isActive?: boolean;
+  lastLoginDate?: Date;
+  institution?: string;
+  position?: number;
+  preferredLanguage?: number;
+  bio?: string;
+  socialLinks?: string;
+  experiencePoints?: number;
+  level?: number;
+  badgeCount?: number;
+  coin?: number;
+  achievementCount?: number;
+  streak?: number;
+  rank?: number;
+  completedQuests?: number;
+  currentQuest?: string;
+  progress?: number;
+  totalLoginCount?: number;
+  isEmailVerified?: boolean;
+  isPhoneVerified?: boolean;
+}

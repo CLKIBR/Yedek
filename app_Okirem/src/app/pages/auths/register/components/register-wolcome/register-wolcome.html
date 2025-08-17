@@ -1,0 +1,43 @@
+<div class="absolute top-4 left-4 z-30">
+  <p class="text-xs text-gray-600 text-left max-w-lg">
+    Kayıt olarak <a [routerLink]="['/legal/terms/terms-of-use']" class="underline text-indigo-500">Kullanım Şartları</a>
+    ve <a [routerLink]="['/legal/policy/privacy-policy']" class="underline text-indigo-500">Gizlilik Politikası</a>'nı
+    kabul etmiş olursunuz.<br>
+    Bu site reCAPTCHA Enterprise tarafından korunmaktadır ve Google <a href="https://policies.google.com/privacy"
+      target="_blank" class="underline text-indigo-500">Gizlilik
+      Politikası</a> ile <a href="https://policies.google.com/terms" target="_blank"
+      class="underline text-indigo-500">Hizmet Şartları</a> geçerlidir.
+  </p>
+</div>
+<section class="relative flex justify-center items-center min-h-screen max-h-screen bg-white overflow-hidden overflow-y-hidden">
+
+
+  <!-- Hero: 3 Bölümde Balon ve Karakterler -->
+  <div class="w-full flex flex-col md:flex-row gap-8 justify-end items-center py-8">
+    <div *ngFor="let card of roleCards" class="flex-1 flex flex-col items-center self-end">
+      <!-- Üst: Balon ve Rol -->
+      <div class="relative  cursor-pointer justify-end top-[100px]" (click)="selectRole(card.role)">
+        <!-- Balon PNG – alt katman -->
+        <img [src]="'assets/images/balon.png'" alt="Balon" class="w-[400px] h-auto z-0 " />
+
+        <!-- Mesaj – üst katman -->
+        <div class="absolute inset-0 z-10 w-[320px] max-w-full left-[40px]
+                    flex flex-col items-center justify-center -translate-y-5
+                    px-4 text-center text-base font-semibold text-black leading-snug pointer-events-none break-words">
+
+          <!-- Başlık (Öğrenciyim, Öğretmenim, Veliyim) -->
+          <div class="text-lg font-bold text-indigo-700 mb-2">{{ card.title }}</div>
+
+          <!-- Açıklama Mesajı -->
+          <div class="text-sm text-black font-medium">{{ card.message }}</div>
+
+        </div>
+      </div>
+      <!-- Alt: Karakter -->
+      <div class="w-full flex flex-col items-center cursor-pointer" (click)="selectRole(card.role)">
+        <img [src]="card.icon" [alt]="card.title" class="max-w-[60vh] max-h-[70vh] object-contain" />
+      </div>
+    </div>
+  </div>
+
+</section>

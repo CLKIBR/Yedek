@@ -1,0 +1,14 @@
+﻿using NArchitecture.Core.Application.Responses;
+using Domain.Enums;
+
+namespace Application.Features.ParentStudentLinks.Commands.Update;
+
+public class UpdatedParentStudentLinkResponse : IResponse
+{
+    public Guid Id { get; set; }
+    public Guid ParentProfileId { get; set; }
+    public Guid StudentProfileId { get; set; }
+    public RelationshipType Relationship { get; set; }
+    public bool IsPrimary { get; set; }
+    public Guid? TenantId { get; set; }
+}

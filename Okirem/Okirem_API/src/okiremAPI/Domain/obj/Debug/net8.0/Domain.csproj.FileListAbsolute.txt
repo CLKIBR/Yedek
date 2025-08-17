@@ -1,0 +1,13 @@
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\bin\Debug\net8.0\Domain.dll
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.dll
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Projeler\Okirem\Okirem_API\src\okiremAPI\Domain\obj\Debug\net8.0\ref\Domain.dll

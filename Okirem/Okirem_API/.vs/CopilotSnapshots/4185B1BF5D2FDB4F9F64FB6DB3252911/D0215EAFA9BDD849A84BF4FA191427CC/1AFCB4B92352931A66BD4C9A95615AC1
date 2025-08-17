@@ -1,0 +1,31 @@
+﻿using Application.Features.AdminProfiles.Commands.Create;
+using Application.Features.AdminProfiles.Commands.Delete;
+using Application.Features.AdminProfiles.Commands.Update;
+using Application.Features.AdminProfiles.Queries.GetById;
+using Application.Features.AdminProfiles.Queries.GetList;
+using AutoMapper;
+using NArchitecture.Core.Application.Responses;
+using Domain.Entities;
+using NArchitecture.Core.Persistence.Paging;
+
+namespace Application.Features.AdminProfiles.Profiles;
+
+public class MappingProfiles : Profile
+{
+    public MappingProfiles()
+    {
+        CreateMap<CreateAdminProfileCommand, AdminProfile>();
+        CreateMap<AdminProfile, CreatedAdminProfileResponse>();
+
+        CreateMap<UpdateAdminProfileCommand, AdminProfile>();
+        CreateMap<AdminProfile, UpdatedAdminProfileResponse>();
+
+        CreateMap<DeleteAdminProfileCommand, AdminProfile>();
+        CreateMap<AdminProfile, DeletedAdminProfileResponse>();
+
+        CreateMap<AdminProfile, GetByIdAdminProfileResponse>();
+
+        CreateMap<AdminProfile, GetListAdminProfileListItemDto>();
+        CreateMap<IPaginate<AdminProfile>, GetListResponse<GetListAdminProfileListItemDto>>();
+    }
+}

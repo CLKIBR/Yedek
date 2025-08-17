@@ -1,0 +1,13 @@
+﻿using NArchitecture.Core.Application.Dtos;
+
+namespace Application.Features.Classrooms.Queries.GetList;
+
+public class GetListClassroomListItemDto : IDto
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public Guid SchoolId { get; set; }
+    public string? Grade { get; set; }
+    public string? Notes { get; set; }
+    public Guid? TenantId { get; set; }
+}

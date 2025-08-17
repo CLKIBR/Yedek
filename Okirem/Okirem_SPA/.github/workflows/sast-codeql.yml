@@ -1,0 +1,60 @@
+name: SAST - CodeQL Analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1' # Her Pazartesi 03:00'te otomatik tarama
+
+jobs:
+  analyze:
+    name: Analyze (CodeQL)
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    continue-on-error: false
+    if: always()
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          # TypeScript, CodeQL'in JavaScript analizörü tarafından kapsanır.
+          languages: javascript
+          # Veritabanını arşivlemek için konum belirliyoruz.
+          db-location: codeql-db
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          # Tek analiz/yükleme: ayrı upload-sarif adımı yok.
+          category: "codeql-javascript-unique"
+
+      - name: Archive CodeQL database
+        uses: actions/upload-artifact@v4
+        with:
+          name: codeql-database
+          path: codeql-db
+
+      - name: Send email on failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: 'CodeQL SAST Workflow Failed'
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
+          body: 'CodeQL SAST workflow failed for ${{ github.repository }} on ${{ github.ref }}. Lütfen inceleyiniz.'

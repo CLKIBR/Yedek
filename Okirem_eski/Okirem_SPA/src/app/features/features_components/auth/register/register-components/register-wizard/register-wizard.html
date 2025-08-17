@@ -1,0 +1,469 @@
+<div class="min-h-screen flex justify-center items-center px-4 sm:px-0">
+    <div class="absolute inset-0 z-10 pointer-events-none">
+        <img src="assets/images/hero.png" alt="Hero" class="absolute left-0 bottom-0 max-h-[70vh] object-contain" />
+
+        <!-- Üst: Balonlar -->
+        <div class="absolute top-[22px]  flex gap-16 justify-start items-start z-20 left-[100px]">
+            <div *ngIf="steps[currentStep]?.message" class="flex-1 flex flex-col items-start">
+
+                <!-- Balon resmi ve metni -->
+                <div class="relative cursor-pointer">
+                    <!-- Balon PNG – alt katman -->
+                    <img [src]="'assets/images/balon.png'" alt="Balon" class="w-[400px] h-auto z-0" />
+
+                    <!-- Mesaj – üst katman -->
+                    <div class="absolute inset-0 z-10 w-[300px] left-[50px] 
+                        flex items-center justify-center -translate-y-5
+                        px-6  text-center text-base font-semibold text-black leading-snug pointer-events-none">
+                        {{ steps[currentStep].message }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="relative py-3 sm:max-w-xl sm:mx-auto w-full">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto w-full">
+            <div class="align-items-center align-items-center z-0" style="height: 100px;">
+                <img [src]="getRoleCardImage()" alt="Hero"
+                    class="absolute left-0 bottom-0 max-h-[100vh] object-contain" />
+            </div>
+            <div class="max-w-sm mx-auto w-full align-items-center z-20" style="height: 380px;">
+                <form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4 max-w-[35vh] ml-8 z-20">
+                    <ng-container *ngIf="steps.length > 0">
+                        <div class="relative">
+                            <!-- Dynamic Input -->
+                            <ng-container [ngSwitch]="steps[currentStep].type">
+                                <!-- TEXT -->
+
+                                <!-- fullName -->
+                                @if (steps[currentStep].field === 'nameStep') {
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 120px;">
+
+                                    <!-- Hata Mesajı -->
+                                    @if ((form.controls['firstName'].invalid && form.controls['firstName'].touched) ||
+                                    (form.controls['lastName'].invalid && form.controls['lastName'].touched)) {
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].message }}
+                                    </div>
+                                    }
+
+                                    <!-- Ad Input -->
+                                    <input cFormControl formControlName="firstName" placeholder="Ad" sizing="lg"
+                                        type="text" class="w-100 mt-0" />
+
+                                    <!-- Soyad Input -->
+                                    <input cFormControl formControlName="lastName" placeholder="Soyad" sizing="lg"
+                                        type="text" class="w-100 mt-0" />
+                                </div>
+                                }
+
+
+
+                                <!-- school -->
+                                @if (steps[currentStep].field === 'school'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['school'].invalid && form.controls['school'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+
+
+                                    <input cFormControl formControlName="school"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+
+
+                                </div>}
+
+                                <!-- class -->
+                                @if (steps[currentStep].field === 'class'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['class'].invalid && form.controls['class'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+
+
+                                    <input cFormControl formControlName="class"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+
+
+                                </div>}
+
+                                <!-- schoolNumber -->
+                                @if (steps[currentStep].field === 'schoolNumber'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['schoolNumber'].invalid &&
+                                    form.controls['schoolNumber'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+
+
+                                    <input cFormControl formControlName="schoolNumber"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+
+
+                                </div>}
+
+
+                                <!-- favoriteSubject -->
+                                @if (steps[currentStep].field === 'favoriteSubject'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['favoriteSubject'].invalid &&
+                                    form.controls['favoriteSubject'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>}
+
+                                    <select [formControlName]="steps[currentStep].field" cSelect sizing="lg"
+                                        class="w-100 mt-4">
+                                        <option>{{ steps[currentStep].label }}</option>
+                                        <option *ngFor="let opt of steps[currentStep].options" [value]="opt">{{ opt }}
+                                        </option>
+                                    </select>
+                                </div>}
+
+                                <!-- hobbies -->
+                                @if (steps[currentStep].field === 'hobbies'){
+                                <div class="position-relative d-flex align-items-center" style="min-height: 70px;">
+                                    @if (form.controls['hobbies'].invalid &&
+                                    form.controls['hobbies'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>}
+                                    <c-form-check *ngFor="let opt of steps[currentStep].options" class="w-full mt-4">
+                                        <input cFormCheckInput id="checkOne" type="checkbox" [value]="opt"
+                                            (change)="onMultiSelectChange(steps[currentStep].field, $event)"
+                                            [checked]="form.value[steps[currentStep].field]?.includes(opt)" />
+                                        <label cFormCheckLabel for="checkOne">{{ opt }}</label>
+                                    </c-form-check>
+                                </div>}
+
+                                <!-- futureDream -->
+                                @if (steps[currentStep].field === 'futureDream'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['futureDream'].invalid &&
+                                    form.controls['futureDream'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+
+
+                                    <input cFormControl formControlName="futureDream"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+
+
+                                </div>}
+
+                                <!-- quiz1 -->
+                                @if (steps[currentStep].field === 'quiz1') {
+                                <div class="position-relative w-100" style="min-height:70px;">
+                                    @if (form.get('quiz1')?.invalid && form.get('quiz1')?.touched) {
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>
+                                    }
+                                    <div class="d-flex flex-wrap gap-2 mt-4 ps-2">
+                                        @for (opt of steps[currentStep].options; track $index) {
+                                        @let cid = 'quiz1_' + $index;
+                                        <c-form-check class="d-flex align-items-center gap-2" style="line-height: 1;">
+                                            <input cFormCheckInput type="radio" [id]="cid" name="quiz1"
+                                                [formControlName]="steps[currentStep].field" [value]="opt"
+                                                class="m-0 p-0" />
+                                            <label cFormCheckLabel [for]="cid" class="fs-2 mb-0"
+                                                style="display: flex; align-items: center; height: 100%;">
+                                                {{ opt }}
+                                            </label>
+                                        </c-form-check>
+                                        }
+                                    </div>
+                                </div>
+                                }
+
+                                <!-- quiz2 -->
+                                @if (steps[currentStep].field === 'quiz2') {
+                                <div class="position-relative w-100" style="min-height:70px;">
+                                    @if (form.get('quiz2')?.invalid && form.get('quiz2')?.touched) {
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>
+                                    }
+                                    <div class="d-flex flex-wrap gap-2 mt-4 ps-2">
+                                        @for (opt of steps[currentStep].options; track $index) {
+                                        @let cid = 'quiz2' + $index;
+                                        <c-form-check class="d-flex align-items-center gap-2" style="line-height: 1;">
+                                            <input cFormCheckInput type="radio" [id]="cid" name="quiz2"
+                                                [formControlName]="steps[currentStep].field" [value]="opt"
+                                                class="m-0 p-0" />
+                                            <label cFormCheckLabel [for]="cid" class="fs-2 mb-0"
+                                                style="display: flex; align-items: center; height: 100%;">
+                                                {{ opt }}
+                                            </label>
+                                        </c-form-check>
+                                        }
+                                    </div>
+                                </div>
+                                }
+                                <!-- gender -->
+                                @if (steps[currentStep].field === 'gender'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['gender'].invalid &&
+                                    form.controls['gender'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>}
+
+                                    <select [formControlName]="steps[currentStep].field" cSelect sizing="lg"
+                                        class="w-100 mt-4">
+                                        <option value="0">Belirtilmedi</option>
+                                        <option value="1">Erkek</option>
+                                        <option value="2">Kadın</option>
+                                        <option value="3">Diğer</option>
+                                    </select>
+                                </div>}
+
+                                <!-- preferredLanguage -->
+                                @if (steps[currentStep].field === 'preferredLanguage'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    @if (form.controls['preferredLanguage'].invalid &&
+                                    form.controls['preferredLanguage'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }}
+                                    </div>}
+
+                                    <select [formControlName]="steps[currentStep].field" cSelect sizing="lg"
+                                        class="w-100 mt-4">
+                                        <option value="0">Belirtilmedi</option>
+                                        <option value="1">Türkçe</option>
+                                        <option value="2">İngilizce</option>
+                                        <option value="3">Almanca</option>
+                                        <option value="4">Fransızca</option>
+                                    </select>
+                                </div>}
+
+
+                                <!-- Pozisyon -->
+                                @if (steps[currentStep].field === 'position') {
+                                <div class="position-relative" style="min-height: 70px;">
+                                    @if (form.get('position')?.invalid && form.get('position')?.touched) {
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        Pozisyon seçimi zorunludur.
+                                    </div>
+                                    }
+                                    <select cFormControl formControlName="position" sizing="lg" class="w-100 mt-4">
+                                        <option value="0">Belirtilmedi</option>
+                                        <option value="1">Öğrenci</option>
+                                        <option value="2">Öğretmen</option>
+                                        <option value="3">Admin</option>
+                                        <option value="4">Veli</option>
+                                        <option value="5">Diğer</option>
+                                    </select>
+                                </div>
+                                }
+
+
+                                <!-- branch -->
+                                @if (steps[currentStep].field === 'branch'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['branch'].invalid && form.controls['branch'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="branch"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+
+                                <!-- classCount -->
+                                @if (steps[currentStep].field === 'classCount'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['classCount'].invalid && form.controls['classCount'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="classCount"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- experience -->
+                                @if (steps[currentStep].field === 'experience'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['experience'].invalid && form.controls['experience'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="experience"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- language -->
+                                @if (steps[currentStep].field === 'language'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['language'].invalid && form.controls['language'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="language"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- childrenCount -->
+                                @if (steps[currentStep].field === 'childrenCount'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['childrenCount'].invalid &&
+                                    form.controls['childrenCount'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="childrenCount"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- studentNames -->
+                                @if (steps[currentStep].field === 'studentNames'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['studentNames'].invalid &&
+                                    form.controls['studentNames'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="studentNames"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- contactPreference -->
+                                @if (steps[currentStep].field === 'contactPreference'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['contactPreference'].invalid &&
+                                    form.controls['contactPreference'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="contactPreference"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- email -->
+                                @if (steps[currentStep].field === 'email'){
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['email'].invalid && form.controls['email'].touched){
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>}
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="email"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="text"
+                                        class="w-100 mt-4" />
+                                </div>}
+
+                                <!-- password -->
+                                @if (steps[currentStep].field === 'password') {
+                                <div class="position-relative d-flex flex-column align-items-center"
+                                    style="min-height: 70px;">
+                                    <!-- Hata Mesajı (absolute, üstte ortalı) -->
+                                    @if (form.controls['password'].invalid && form.controls['password'].touched) {
+                                    <div
+                                        class="position-absolute top-0 start-50 translate-middle-x text-danger small text-center">
+                                        {{ steps[currentStep].label }} girilmelidir.
+                                    </div>
+                                    }
+                                    <!-- Input -->
+                                    <input cFormControl formControlName="password"
+                                        placeholder="{{ steps[currentStep].label }}" sizing="lg" type="password"
+                                        class="w-100 mt-4" />
+                                </div>
+                                }
+
+                            </ng-container>
+                        </div>
+                    </ng-container>
+
+                    <!-- Butonlar -->
+                    <div class="relative flex justify-between">
+                        <button type="button" (click)="prevStep()"
+                            class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                            Geri
+                        </button>
+
+                        <button type="button" *ngIf="!isLastStep()" (click)="nextStep()"
+                            class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                            İleri
+                        </button>
+
+                        <button type="submit" *ngIf="isLastStep()"
+                            class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                            Kaydı Tamamla
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <lagel></lagel>
+</div>

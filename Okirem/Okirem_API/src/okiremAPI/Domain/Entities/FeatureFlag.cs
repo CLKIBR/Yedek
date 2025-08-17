@@ -1,0 +1,15 @@
+﻿using NArchitecture.Core.Persistence.Repositories;
+using System;
+using System.Collections.Generic;
+
+namespace Domain.Entities;
+
+public class FeatureFlag : Entity<Guid>
+{
+    public string Name { get; set; } = string.Empty; // Teknik/benzersiz ad
+    public string? Description { get; set; } // Açıklama (opsiyonel)
+    public bool Enabled { get; set; } // Flag aktif mi?
+    public string[]? Environments { get; set; } // Ortamlar (opsiyonel)
+    public string[]? AllowedClaims { get; set; } // İzin verilen roller (opsiyonel)
+    public string? Metadata { get; set; } // Ek bilgiler için JSON string (opsiyonel)
+}

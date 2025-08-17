@@ -1,0 +1,14 @@
+﻿using FluentValidation;
+
+namespace Application.Features.TeacherStudentLinks.Commands.Create;
+
+public class CreateTeacherStudentLinkCommandValidator : AbstractValidator<CreateTeacherStudentLinkCommand>
+{
+    public CreateTeacherStudentLinkCommandValidator()
+    {
+        RuleFor(c => c.TeacherProfileId).NotEmpty();
+        RuleFor(c => c.StudentProfileId).NotEmpty();
+        RuleFor(c => c.LinkRole).NotEmpty();
+        RuleFor(c => c.IsPrimary).NotEmpty();
+    }
+}

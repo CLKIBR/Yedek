@@ -1,0 +1,31 @@
+﻿using Application.Features.ParentStudentLinks.Commands.Create;
+using Application.Features.ParentStudentLinks.Commands.Delete;
+using Application.Features.ParentStudentLinks.Commands.Update;
+using Application.Features.ParentStudentLinks.Queries.GetById;
+using Application.Features.ParentStudentLinks.Queries.GetList;
+using AutoMapper;
+using NArchitecture.Core.Application.Responses;
+using Domain.Entities;
+using NArchitecture.Core.Persistence.Paging;
+
+namespace Application.Features.ParentStudentLinks.Profiles;
+
+public class MappingProfiles : Profile
+{
+    public MappingProfiles()
+    {
+        CreateMap<CreateParentStudentLinkCommand, ParentStudentLink>();
+        CreateMap<ParentStudentLink, CreatedParentStudentLinkResponse>();
+
+        CreateMap<UpdateParentStudentLinkCommand, ParentStudentLink>();
+        CreateMap<ParentStudentLink, UpdatedParentStudentLinkResponse>();
+
+        CreateMap<DeleteParentStudentLinkCommand, ParentStudentLink>();
+        CreateMap<ParentStudentLink, DeletedParentStudentLinkResponse>();
+
+        CreateMap<ParentStudentLink, GetByIdParentStudentLinkResponse>();
+
+        CreateMap<ParentStudentLink, GetListParentStudentLinkListItemDto>();
+        CreateMap<IPaginate<ParentStudentLink>, GetListResponse<GetListParentStudentLinkListItemDto>>();
+    }
+}

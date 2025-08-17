@@ -1,0 +1,66 @@
+<div class="lesson-admin p-4">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Dersler</h2>
+    <button (click)="openAddModal()"
+      class="px-4 py-2 bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white rounded-lg hover:scale-105 transition duration-300 font-semibold shadow-md hover:shadow-lg">
+      Ders Ekle
+    </button>
+  </div>
+
+  <!-- Kart Görünümü -->
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 px-2">
+    <div *ngFor="let lesson of lessons()" class="relative w-[200px] h-[240px] flex flex-col items-center cursor-pointer mx-auto">
+      <!-- Gölge Arka Plan (Gradient) -->
+      <div
+        class="absolute left-1/2 top-1/2 w-[180px] h-[200px] -translate-x-1/2 -translate-y-1/2 rotate-2 rounded-xl shadow-lg"
+        [ngClass]="'bg-gradient-to-br ' + lesson.gradient"></div>
+      <!-- İç Kart -->
+      <div
+        class="absolute left-1/2 top-1/2 w-[175px] h-[195px] -translate-x-1/2 -translate-y-1/2 rotate-2 rounded-xl bg-white p-3 transition duration-300 hover:scale-105 hover:rotate-0 flex flex-col shadow-lg">
+        
+        <!-- Üst nokta -->
+        <div class="flex justify-end mb-1">
+          <div class="h-1.5 w-1.5 rounded-full bg-indigo-600"></div>
+        </div>
+        
+        <!-- Icon -->
+        <div class="flex justify-center items-center flex-1">
+          <iconify-icon [icon]="lesson.icon" width="48" height="48"
+            [style.color]="getIconColor(lesson.gradient)"></iconify-icon>
+        </div>
+        
+        <!-- Metin İçeriği -->
+        <div class="text-center space-y-1 mb-2">
+          <h3 class="text-md font-bold text-gray-800 leading-tight truncate">{{ lesson.title }}</h3>
+          <p class="text-xs font-medium text-indigo-600">{{ lesson.date }}</p>
+        </div>
+
+        <!-- Butonlar - Kartın İçinde -->
+        <div class="flex gap-1 justify-center">
+          <button (click)="openUpdateModal(lesson)"
+            class="px-2 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition shadow-sm flex-1">
+            Edit
+          </button>
+          <button (click)="openDeleteModal(lesson)"
+            class="px-2 py-1 bg-red-500 text-white text-xs rounded hover:bg-red-600 transition shadow-sm flex-1">
+            Del
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eğer ders yoksa -->
+  <div *ngIf="lessons().length === 0" class="text-center py-12">
+    <iconify-icon icon="mdi:book-outline" width="48" height="48" class="text-gray-400 mx-auto mb-4"></iconify-icon>
+    <p class="text-gray-500 text-lg">Henüz ders eklenmemiş</p>
+    <p class="text-gray-400">İlk dersinizi eklemek için "Ders Ekle" butonuna tıklayın</p>
+  </div>
+
+  <!-- Modallar -->
+  <add-lesson-modal *ngIf="showAddModal()" (close)="closeAddModal()" (added)="onLessonAdded()"></add-lesson-modal>
+  <update-lesson-modal *ngIf="showUpdateModal() && selectedLesson()" [lesson]="selectedLesson()!"
+    (close)="closeUpdateModal()" (updated)="onLessonUpdated()"></update-lesson-modal>
+  <delete-lesson-modal *ngIf="showDeleteModal()" [lessonId]="selectedLesson()?.id || ''" (close)="closeDeleteModal()"
+    (deleted)="onLessonDeleted()"></delete-lesson-modal>
+</div>

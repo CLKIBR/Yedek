@@ -1,0 +1,20 @@
+<c-sidebar visible>
+     <c-sidebar-header class="border-bottom">
+    <c-sidebar-brand [routerLink]="[]">
+      <svg [class]="{icon: false}" cIcon class="sidebar-brand-full" height="36" name="logo" title="CoreUI Logo"></svg>
+    </c-sidebar-brand>
+  </c-sidebar-header>
+    <ng-scrollbar #scrollbar="ngScrollbar" (updated)="onScrollbarUpdate($event)" class="overflow"
+        pointerEventsMethod="scrollbar" visibility="hover">
+        <c-sidebar-nav #overflow [navItems]="navItems" dropdownMode="close" compact />
+    </ng-scrollbar>
+</c-sidebar>
+<!--main-->
+<div class="wrapper d-flex flex-column min-vh-100">
+  <!--app-body-->
+  <div class="body flex-grow-1">
+  <c-container fluid class="h-auto px-4 main-content-container" style="position:relative; min-height:100vh; height:100vh;">
+      <router-outlet></router-outlet>
+    </c-container>
+  </div>
+</div>

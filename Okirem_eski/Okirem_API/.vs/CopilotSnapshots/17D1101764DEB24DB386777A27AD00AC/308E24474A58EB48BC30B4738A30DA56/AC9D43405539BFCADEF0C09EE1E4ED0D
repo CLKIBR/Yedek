@@ -1,0 +1,18 @@
+﻿using NArchitecture.Core.Security.Entities;
+
+namespace Domain.Entities;
+
+public class User : User<Guid>
+{
+    public int ExperiencePoints { get; set; } // Kullanıcının XP puanı
+    public int Level { get; set; } // Kullanıcının seviye bilgisi
+    public int BadgeCount { get; set; } // Kazanılan rozet sayısı
+    public int Coin { get; set; } // Sanal para miktarı
+    public int AchievementCount { get; set; } // Tamamlanan başarımlar
+    public int Streak { get; set; } // Günlük giriş serisi
+    public int Rank { get; set; } // Platformdaki sıralama
+    public virtual ICollection<UserOperationClaim> UserOperationClaims { get; set; } = default!;
+    public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = default!;
+    public virtual ICollection<OtpAuthenticator> OtpAuthenticators { get; set; } = default!;
+    public virtual ICollection<EmailAuthenticator> EmailAuthenticators { get; set; } = default!;
+}

@@ -1,0 +1,30 @@
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Persistence.EntityConfigurations;
+
+public class TeacherStudentLinkConfiguration : IEntityTypeConfiguration<TeacherStudentLink>
+{
+    public void Configure(EntityTypeBuilder<TeacherStudentLink> builder)
+    {
+        builder.ToTable("TeacherStudentLinks").HasKey(tsl => tsl.Id);
+
+        builder.Property(tsl => tsl.Id).HasColumnName("Id").IsRequired();
+        builder.Property(tsl => tsl.TeacherProfileId).HasColumnName("TeacherProfileId").IsRequired();
+        builder.Property(tsl => tsl.StudentProfileId).HasColumnName("StudentProfileId").IsRequired();
+        builder.Property(tsl => tsl.ClassroomId).HasColumnName("ClassroomId");
+        builder.Property(tsl => tsl.AcademicYear).HasColumnName("AcademicYear");
+        builder.Property(tsl => tsl.LinkRole).HasColumnName("LinkRole").IsRequired();
+        builder.Property(tsl => tsl.EffectiveFrom).HasColumnName("EffectiveFrom");
+        builder.Property(tsl => tsl.EffectiveTo).HasColumnName("EffectiveTo");
+        builder.Property(tsl => tsl.IsPrimary).HasColumnName("IsPrimary").IsRequired();
+        builder.Property(tsl => tsl.Notes).HasColumnName("Notes");
+        builder.Property(tsl => tsl.TenantId).HasColumnName("TenantId");
+        builder.Property(tsl => tsl.CreatedDate).HasColumnName("CreatedDate").IsRequired();
+        builder.Property(tsl => tsl.UpdatedDate).HasColumnName("UpdatedDate");
+        builder.Property(tsl => tsl.DeletedDate).HasColumnName("DeletedDate");
+
+        builder.HasQueryFilter(tsl => !tsl.DeletedDate.HasValue);
+    }
+}

@@ -1,0 +1,22 @@
+﻿using FluentValidation;
+
+namespace Application.Features.StudentProfiles.Commands.Create;
+
+public class CreateStudentProfileCommandValidator : AbstractValidator<CreateStudentProfileCommand>
+{
+    public CreateStudentProfileCommandValidator()
+    {
+        RuleFor(c => c.UserId).NotEmpty();
+        RuleFor(c => c.FirstName).NotEmpty();
+        RuleFor(c => c.LastName).NotEmpty();
+        RuleFor(c => c.IsActive).NotEmpty();
+        RuleFor(c => c.Gender).NotEmpty();
+        RuleFor(c => c.IsArchived).NotEmpty();
+        RuleFor(c => c.Level).NotEmpty();
+        RuleFor(c => c.XP).NotEmpty();
+        RuleFor(c => c.TotalPoints).NotEmpty();
+        RuleFor(c => c.StreakDays).NotEmpty();
+        RuleFor(c => c.CompletedTaskCount).NotEmpty();
+        RuleFor(c => c.AverageScore).NotEmpty();
+    }
+}

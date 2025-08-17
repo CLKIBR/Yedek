@@ -1,0 +1,22 @@
+﻿using NArchitecture.Core.Application.Dtos;
+using Domain.Enums;
+
+namespace Application.Features.Schools.Queries.GetList;
+
+public class GetListSchoolListItemDto : IDto
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public SchoolType Type { get; set; }
+    public string? City { get; set; }
+    public string? District { get; set; }
+    public string? Country { get; set; }
+    public string? AddressLine1 { get; set; }
+    public string? AddressLine2 { get; set; }
+    public string? PostalCode { get; set; }
+    public string? Phone { get; set; }
+    public string? Email { get; set; }
+    public string? WebsiteUrl { get; set; }
+    public string? Notes { get; set; }
+    public Guid? TenantId { get; set; }
+}

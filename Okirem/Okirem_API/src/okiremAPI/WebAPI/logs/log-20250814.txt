@@ -1,0 +1,208 @@
+2025-08-14 14:22:51.758 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:22:51.787 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:22:51.799 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 14:22:51.800 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:22:51.801 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 14:22:51.812 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 14:22:51.820 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-14 14:22:51.921 +03:00 [INF] User profile is available. Using 'C:\Users\clkib\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-14 14:22:52.044 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/index.html - null null
+2025-08-14 14:22:52.080 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 14:22:52.081 +03:00 [INF] Hosting environment: Development
+2025-08-14 14:22:52.081 +03:00 [INF] Content root path: D:\Projeler\Okirem\Okirem_API\src\okiremAPI\WebAPI
+2025-08-14 14:22:52.218 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/index.html - 200 null text/html;charset=utf-8 177.7339ms
+2025-08-14 14:22:52.251 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-14 14:22:52.258 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - 200 16497 application/javascript; charset=utf-8 7.3811ms
+2025-08-14 14:22:52.265 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_vs/browserLink - null null
+2025-08-14 14:22:52.332 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.6368ms
+2025-08-14 14:22:52.419 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - null null
+2025-08-14 14:22:52.469 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.7098ms
+2025-08-14 14:23:17.344 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:60805/api/Log - application/json 269
+2025-08-14 14:23:17.417 +03:00 [INF] CORS policy execution failed.
+2025-08-14 14:23:17.417 +03:00 [INF] Request origin http://localhost:60805 does not have permission to access the resource.
+2025-08-14 14:23:17.434 +03:00 [INF] Executing endpoint 'WebAPI.Controllers.LogController.Post (WebAPI)'
+2025-08-14 14:23:17.454 +03:00 [INF] Route matched with {action = "Post", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WebAPI.Models.ClientLogDto) on controller WebAPI.Controllers.LogController (WebAPI).
+2025-08-14 14:23:17.485 +03:00 [ERR] Kullanıcı profil bilgileri yüklenirken hata oluştu. | UserProfileComponent | at UserProfileService.GetProfile(User user) in UserProfileService.cs:line 42
+2025-08-14 14:23:17.487 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-08-14 14:23:17.490 +03:00 [INF] Executed action WebAPI.Controllers.LogController.Post (WebAPI) in 31.8841ms
+2025-08-14 14:23:17.490 +03:00 [INF] Executed endpoint 'WebAPI.Controllers.LogController.Post (WebAPI)'
+2025-08-14 14:23:17.492 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:60805/api/Log - 200 null null 148.2894ms
+2025-08-14 14:27:23.362 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:27:23.391 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:27:23.400 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 14:27:23.401 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 14:27:23.402 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 14:27:23.410 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 14:27:23.418 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-14 14:27:23.514 +03:00 [INF] User profile is available. Using 'C:\Users\clkib\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-14 14:27:23.649 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/index.html - null null
+2025-08-14 14:27:23.680 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 14:27:23.680 +03:00 [INF] Hosting environment: Development
+2025-08-14 14:27:23.681 +03:00 [INF] Content root path: D:\Projeler\Okirem\Okirem_API\src\okiremAPI\WebAPI
+2025-08-14 14:27:23.806 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/index.html - 200 null text/html;charset=utf-8 161.1917ms
+2025-08-14 14:27:23.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-14 14:27:23.838 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - 200 16497 application/javascript; charset=utf-8 7.0123ms
+2025-08-14 14:27:23.840 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_vs/browserLink - null null
+2025-08-14 14:27:23.888 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.0435ms
+2025-08-14 14:27:24.038 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - null null
+2025-08-14 14:27:24.101 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.8488ms
+2025-08-14 14:28:27.147 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:60805/api/Log - application/json 128
+2025-08-14 14:28:27.219 +03:00 [INF] Executing endpoint 'WebAPI.Controllers.LogController.Post (WebAPI)'
+2025-08-14 14:28:27.231 +03:00 [INF] Route matched with {action = "Post", controller = "Log"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(WebAPI.Models.ClientLogDto) on controller WebAPI.Controllers.LogController (WebAPI).
+2025-08-14 14:28:27.270 +03:00 [INF] Test log from PowerShell | frontend
+2025-08-14 14:28:27.272 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-08-14 14:28:27.275 +03:00 [INF] Executed action WebAPI.Controllers.LogController.Post (WebAPI) in 41.7378ms
+2025-08-14 14:28:27.275 +03:00 [INF] Executed endpoint 'WebAPI.Controllers.LogController.Post (WebAPI)'
+2025-08-14 14:28:27.277 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:60805/api/Log - 200 null null 130.3614ms
+2025-08-14 15:08:08.784 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 15:08:08.829 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 15:08:08.837 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 15:08:08.838 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 15:08:08.839 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 15:08:08.847 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 15:08:08.856 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-14 15:08:09.014 +03:00 [INF] User profile is available. Using 'C:\Users\clkib\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-14 15:08:09.175 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/index.html - null null
+2025-08-14 15:08:09.201 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 15:08:09.202 +03:00 [INF] Hosting environment: Development
+2025-08-14 15:08:09.202 +03:00 [INF] Content root path: D:\Projeler\Okirem\Okirem_API\src\okiremAPI\WebAPI
+2025-08-14 15:08:09.322 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/index.html - 200 null text/html;charset=utf-8 149.6208ms
+2025-08-14 15:08:09.364 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-14 15:08:09.368 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_vs/browserLink - null null
+2025-08-14 15:08:09.369 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - 200 16497 application/javascript; charset=utf-8 3.9668ms
+2025-08-14 15:08:09.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.3489ms
+2025-08-14 15:08:09.532 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - null null
+2025-08-14 15:08:09.573 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.7951ms
+2025-08-14 18:00:57.021 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:00:57.048 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:00:57.049 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:00:57.050 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:00:57.057 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 18:00:57.063 +03:00 [INF] Applying migration '20250814145958_FeatureFlag'.
+2025-08-14 18:00:57.125 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [UserOperationClaims]
+WHERE [Id] = '5909e261-635f-4730-9e81-9c145314b70e';
+SELECT @@ROWCOUNT;
+2025-08-14 18:00:57.134 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [Users]
+WHERE [Id] = '35d13bbd-3098-485c-a272-bbe0416e0c18';
+SELECT @@ROWCOUNT;
+2025-08-14 18:00:57.137 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FeatureFlags] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [Enabled] bit NOT NULL,
+    [Environments] nvarchar(max) NULL,
+    [AllowedClaims] nvarchar(max) NULL,
+    [Metadata] nvarchar(max) NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [UpdatedDate] datetime2 NULL,
+    [DeletedDate] datetime2 NULL,
+    CONSTRAINT [PK_FeatureFlags] PRIMARY KEY ([Id])
+);
+2025-08-14 18:00:57.149 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'DeletedDate', N'Name', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[OperationClaims]'))
+    SET IDENTITY_INSERT [OperationClaims] ON;
+INSERT INTO [OperationClaims] ([Id], [CreatedDate], [DeletedDate], [Name], [UpdatedDate])
+VALUES (78, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Admin', NULL),
+(79, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Read', NULL),
+(80, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Write', NULL),
+(81, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Create', NULL),
+(82, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Update', NULL),
+(83, '0001-01-01T00:00:00.0000000', NULL, N'FeatureFlags.Delete', NULL);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'DeletedDate', N'Name', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[OperationClaims]'))
+    SET IDENTITY_INSERT [OperationClaims] OFF;
+2025-08-14 18:00:57.153 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AuthenticatorType', N'CreatedDate', N'DeletedDate', N'Email', N'PasswordHash', N'PasswordSalt', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([Id], [AuthenticatorType], [CreatedDate], [DeletedDate], [Email], [PasswordHash], [PasswordSalt], [UpdatedDate])
+VALUES ('466344bb-df21-40b6-9277-c8ecaa319e2b', 0, '0001-01-01T00:00:00.0000000', NULL, N'clkibrahim@outlook.com', 0x04AEC266A7AC195C14DE52B501A120053E15C4F16FF199A56AB760605C5AA79ED66DA79EF02A6E59C21978D7CAFEBDC3AE9CDA41124F83DA02FDE514088947AD, 0x647368E1EF11C081F16D1DC9CE7CAB05CED71D9C1833FEA94FD52CCDFA1828E40897082FA74B1364E6A7AE6BFD0AD6FFEE0560D1308E35B862870AE6FA63D1AA2F825DD844DE8A928F040B9AB58947E106D8ADCCA50016737FF95B47D3629402DE7A7F28DB8A1CCE98ED59D21086335A7A0ADB82D7AE64A8E28F560970BC7845, NULL);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'AuthenticatorType', N'CreatedDate', N'DeletedDate', N'Email', N'PasswordHash', N'PasswordSalt', N'UpdatedDate') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2025-08-14 18:00:57.159 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'DeletedDate', N'OperationClaimId', N'UpdatedDate', N'UserId') AND [object_id] = OBJECT_ID(N'[UserOperationClaims]'))
+    SET IDENTITY_INSERT [UserOperationClaims] ON;
+INSERT INTO [UserOperationClaims] ([Id], [CreatedDate], [DeletedDate], [OperationClaimId], [UpdatedDate], [UserId])
+VALUES ('373b892d-8ce9-4226-8234-82947eb47e22', '0001-01-01T00:00:00.0000000', NULL, 1, NULL, '466344bb-df21-40b6-9277-c8ecaa319e2b');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'CreatedDate', N'DeletedDate', N'OperationClaimId', N'UpdatedDate', N'UserId') AND [object_id] = OBJECT_ID(N'[UserOperationClaims]'))
+    SET IDENTITY_INSERT [UserOperationClaims] OFF;
+2025-08-14 18:00:57.159 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250814145958_FeatureFlag', N'8.0.3');
+2025-08-14 18:01:14.745 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:01:14.771 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:01:14.772 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:01:14.772 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:01:14.779 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 18:01:14.785 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-14 18:02:28.983 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:02:29.018 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:02:29.028 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:02:29.031 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-14 18:02:29.031 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-14 18:02:29.040 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-14 18:02:29.047 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-14 18:02:29.602 +03:00 [INF] User profile is available. Using 'C:\Users\clkib\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-14 18:02:29.738 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/index.html - null null
+2025-08-14 18:02:29.763 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 18:02:29.763 +03:00 [INF] Hosting environment: Development
+2025-08-14 18:02:29.763 +03:00 [INF] Content root path: D:\Projeler\Okirem\Okirem_API\src\okiremAPI\WebAPI
+2025-08-14 18:02:29.928 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/index.html - 200 null text/html;charset=utf-8 192.8325ms
+2025-08-14 18:02:29.959 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_vs/browserLink - null null
+2025-08-14 18:02:29.965 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-14 18:02:29.988 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_framework/aspnetcore-browser-refresh.js - 200 16497 application/javascript; charset=utf-8 7.4271ms
+2025-08-14 18:02:30.073 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.9917ms
+2025-08-14 18:02:30.202 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - null null
+2025-08-14 18:02:30.274 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.7186ms
+2025-08-14 18:04:42.350 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - null null
+2025-08-14 18:04:42.422 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.6477ms
+2025-08-14 18:04:42.524 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:60805/favicon.ico - null null
+2025-08-14 18:04:43.977 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:60805/favicon.ico - 404 null null 1453.7396ms
+2025-08-14 18:04:43.978 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:60805/favicon.ico, Response status code: 404

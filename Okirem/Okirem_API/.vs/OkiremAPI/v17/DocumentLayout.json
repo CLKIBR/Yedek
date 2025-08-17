@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projeler\\Okirem\\Okirem_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OkiremDb/True/SqlTable/dbo.FeatureFlags.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC68273-3585-48B8-B9C0-6BEBF40D5CEB}|src\\okiremAPI\\Domain\\Domain.csproj|d:\\projeler\\okirem\\okirem_api\\src\\okiremapi\\domain\\entities\\featureflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC68273-3585-48B8-B9C0-6BEBF40D5CEB}|src\\okiremAPI\\Domain\\Domain.csproj|solutionrelative:src\\okiremapi\\domain\\entities\\featureflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5C5789-75A7-4773-AB44-13721819502A}|src\\okiremAPI\\WebAPI\\WebAPI.csproj|d:\\projeler\\okirem\\okirem_api\\src\\okiremapi\\webapi\\logs\\log-20250814.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5A5C5789-75A7-4773-AB44-13721819502A}|src\\okiremAPI\\WebAPI\\WebAPI.csproj|solutionrelative:src\\okiremapi\\webapi\\logs\\log-20250814.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AC68273-3585-48B8-B9C0-6BEBF40D5CEB}|src\\okiremAPI\\Domain\\Domain.csproj|d:\\projeler\\okirem\\okirem_api\\src\\okiremapi\\domain\\entities\\adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AC68273-3585-48B8-B9C0-6BEBF40D5CEB}|src\\okiremAPI\\Domain\\Domain.csproj|solutionrelative:src\\okiremapi\\domain\\entities\\adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5C5789-75A7-4773-AB44-13721819502A}|src\\okiremAPI\\WebAPI\\WebAPI.csproj|d:\\projeler\\okirem\\okirem_api\\src\\okiremapi\\webapi\\controllers\\logcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5C5789-75A7-4773-AB44-13721819502A}|src\\okiremAPI\\WebAPI\\WebAPI.csproj|solutionrelative:src\\okiremapi\\webapi\\controllers\\logcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 283,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.FeatureFlags [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OkiremDb/True/SqlTable/dbo.FeatureFlags.sql",
+              "ToolTip": "dbo.FeatureFlags [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-08-14T15:01:43.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250814145958_FeatureFlag.cs",
+              "DocumentMoniker": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs",
+              "RelativeDocumentMoniker": "src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs",
+              "ToolTip": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs",
+              "RelativeToolTip": "src\\okiremAPI\\Persistence\\Migrations\\20250814145958_FeatureFlag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:59:58.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "log-20250814.txt",
+              "DocumentMoniker": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\WebAPI\\logs\\log-20250814.txt",
+              "RelativeDocumentMoniker": "src\\okiremAPI\\WebAPI\\logs\\log-20250814.txt",
+              "ToolTip": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\WebAPI\\logs\\log-20250814.txt",
+              "RelativeToolTip": "src\\okiremAPI\\WebAPI\\logs\\log-20250814.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-14T14:58:12.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FeatureFlag.cs",
+              "DocumentMoniker": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Domain\\Entities\\FeatureFlag.cs",
+              "RelativeDocumentMoniker": "src\\okiremAPI\\Domain\\Entities\\FeatureFlag.cs",
+              "ToolTip": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Domain\\Entities\\FeatureFlag.cs",
+              "RelativeToolTip": "src\\okiremAPI\\Domain\\Entities\\FeatureFlag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:48:07.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminProfile.cs",
+              "DocumentMoniker": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Domain\\Entities\\AdminProfile.cs",
+              "RelativeDocumentMoniker": "src\\okiremAPI\\Domain\\Entities\\AdminProfile.cs",
+              "ToolTip": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\Domain\\Entities\\AdminProfile.cs",
+              "RelativeToolTip": "src\\okiremAPI\\Domain\\Entities\\AdminProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:39:39.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogController.cs",
+              "DocumentMoniker": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\WebAPI\\Controllers\\LogController.cs",
+              "RelativeDocumentMoniker": "src\\okiremAPI\\WebAPI\\Controllers\\LogController.cs",
+              "ToolTip": "D:\\Projeler\\Okirem\\Okirem_API\\src\\okiremAPI\\WebAPI\\Controllers\\LogController.cs",
+              "RelativeToolTip": "src\\okiremAPI\\WebAPI\\Controllers\\LogController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T11:36:25.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

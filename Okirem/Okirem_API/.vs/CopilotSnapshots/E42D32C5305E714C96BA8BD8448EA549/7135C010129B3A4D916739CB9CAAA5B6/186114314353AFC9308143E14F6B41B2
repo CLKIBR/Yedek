@@ -1,0 +1,37 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using WebAPI.Models;
+
+namespace WebAPI.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class LogController : ControllerBase
+{
+    private readonly ILogger<LogController> _logger;
+
+    public LogController(ILogger<LogController> logger)
+    {
+        _logger = logger;
+    }
+
+    [Authorize] // JWT veya başka bir kimlik doğrulama gerektirir
+    [HttpPost]
+    public IActionResult Post([FromBody] ClientLogDto log)
+    {
+        switch (log.Level?.ToLower())
+        {
+            case "error":
+                _logger.LogError("{Message} | {Source} | {StackTrace}", log.Message, log.Source, log.StackTrace);
+                break;
+            case "warning":
+                _logger.LogWarning("{Message} | {Source}", log.Message, log.Source);
+                break;
+            default:
+                _logger.LogInformation("{Message} | {Source}", log.Message, log.Source);
+                break;
+        }
+        return Ok();
+    }
+}

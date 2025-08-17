@@ -1,0 +1,31 @@
+﻿using Application.Features.TeacherProfiles.Commands.Create;
+using Application.Features.TeacherProfiles.Commands.Delete;
+using Application.Features.TeacherProfiles.Commands.Update;
+using Application.Features.TeacherProfiles.Queries.GetById;
+using Application.Features.TeacherProfiles.Queries.GetList;
+using AutoMapper;
+using NArchitecture.Core.Application.Responses;
+using Domain.Entities;
+using NArchitecture.Core.Persistence.Paging;
+
+namespace Application.Features.TeacherProfiles.Profiles;
+
+public class MappingProfiles : Profile
+{
+    public MappingProfiles()
+    {
+        CreateMap<CreateTeacherProfileCommand, TeacherProfile>();
+        CreateMap<TeacherProfile, CreatedTeacherProfileResponse>();
+
+        CreateMap<UpdateTeacherProfileCommand, TeacherProfile>();
+        CreateMap<TeacherProfile, UpdatedTeacherProfileResponse>();
+
+        CreateMap<DeleteTeacherProfileCommand, TeacherProfile>();
+        CreateMap<TeacherProfile, DeletedTeacherProfileResponse>();
+
+        CreateMap<TeacherProfile, GetByIdTeacherProfileResponse>();
+
+        CreateMap<TeacherProfile, GetListTeacherProfileListItemDto>();
+        CreateMap<IPaginate<TeacherProfile>, GetListResponse<GetListTeacherProfileListItemDto>>();
+    }
+}

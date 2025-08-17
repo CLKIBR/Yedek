@@ -1,0 +1,29 @@
+﻿using FluentValidation;
+
+namespace Application.Features.Users.Commands.Create;
+
+public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+{
+    private static readonly GenderType[] AllowedGenders = { GenderType.NotSpecified, GenderType.Male, GenderType.Female, GenderType.Other };
+    private static readonly PositionType[] AllowedPositions = { PositionType.NotSpecified, PositionType.Student, PositionType.Teacher, PositionType.Admin, PositionType.Other };
+    private static readonly LanguageType[] AllowedLanguages = { LanguageType.NotSpecified, LanguageType.Turkish, LanguageType.English, LanguageType.German, LanguageType.French };
+    public CreateUserCommandValidator()
+    {
+        // Zorunlu alanlar
+        RuleFor(c => c.FirstName).NotEmpty().MinimumLength(2);
+        RuleFor(c => c.LastName).NotEmpty().MinimumLength(2);
+        RuleFor(c => c.Email).NotEmpty().EmailAddress();
+        RuleFor(c => c.Password).NotEmpty().MinimumLength(4);
+        RuleFor(c => c.Gender)
+            .Must(g => AllowedGenders.Contains(g))
+            .WithMessage($"Gender must be one of: {string.Join(", ", AllowedGenders)}");
+        RuleFor(c => c.Position)
+            .Must(p => AllowedPositions.Contains(p))
+            .WithMessage($"Position must be one of: {string.Join(", ", AllowedPositions)}");
+        RuleFor(c => c.PreferredLanguage)
+            .Must(l => AllowedLanguages.Contains(l))
+            .WithMessage($"PreferredLanguage must be one of: {string.Join(", ", AllowedLanguages)}");
+        // Opsiyonel alanlar için ek validasyon istenirse eklenebilir
+        // Örneğin: RuleFor(c => c.PhoneNumber).MaximumLength(20);
+    }
+}

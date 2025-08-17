@@ -1,0 +1,3 @@
+wwwroot\emails\2FA.html
+wwwroot\emails\EmailVerify.html
+wwwroot\emails\ForgotPassword.html

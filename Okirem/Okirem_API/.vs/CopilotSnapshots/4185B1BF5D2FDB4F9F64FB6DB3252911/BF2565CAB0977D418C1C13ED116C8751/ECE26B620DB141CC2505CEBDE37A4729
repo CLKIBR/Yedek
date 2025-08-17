@@ -1,0 +1,31 @@
+﻿using Application.Features.ParentProfiles.Commands.Create;
+using Application.Features.ParentProfiles.Commands.Delete;
+using Application.Features.ParentProfiles.Commands.Update;
+using Application.Features.ParentProfiles.Queries.GetById;
+using Application.Features.ParentProfiles.Queries.GetList;
+using AutoMapper;
+using NArchitecture.Core.Application.Responses;
+using Domain.Entities;
+using NArchitecture.Core.Persistence.Paging;
+
+namespace Application.Features.ParentProfiles.Profiles;
+
+public class MappingProfiles : Profile
+{
+    public MappingProfiles()
+    {
+        CreateMap<CreateParentProfileCommand, ParentProfile>();
+        CreateMap<ParentProfile, CreatedParentProfileResponse>();
+
+        CreateMap<UpdateParentProfileCommand, ParentProfile>();
+        CreateMap<ParentProfile, UpdatedParentProfileResponse>();
+
+        CreateMap<DeleteParentProfileCommand, ParentProfile>();
+        CreateMap<ParentProfile, DeletedParentProfileResponse>();
+
+        CreateMap<ParentProfile, GetByIdParentProfileResponse>();
+
+        CreateMap<ParentProfile, GetListParentProfileListItemDto>();
+        CreateMap<IPaginate<ParentProfile>, GetListResponse<GetListParentProfileListItemDto>>();
+    }
+}

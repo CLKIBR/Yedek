@@ -1,0 +1,16 @@
+﻿using FluentValidation;
+
+namespace Application.Features.TeacherProfiles.Commands.Create;
+
+public class CreateTeacherProfileCommandValidator : AbstractValidator<CreateTeacherProfileCommand>
+{
+    public CreateTeacherProfileCommandValidator()
+    {
+        RuleFor(c => c.UserId).NotEmpty();
+        RuleFor(c => c.FirstName).NotEmpty();
+        RuleFor(c => c.LastName).NotEmpty();
+        RuleFor(c => c.IsActive).NotEmpty();
+        RuleFor(c => c.Gender).NotEmpty();
+        RuleFor(c => c.IsArchived).NotEmpty();
+    }
+}
